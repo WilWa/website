@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" InitialTargets="CreateDevCert">
+
+  <PropertyGroup>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <Nullable>enable</Nullable>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>4064f0cb-c3f8-404f-801e-4e5a3da14b84</UserSecretsId>    
+  </PropertyGroup>
+
+  <PropertyGroup Condition="Exists('$(MSBuildProjectDirectory)\devHttps.env')">
+    <DockerfileFastModeStage>vsdev</DockerfileFastModeStage>
+    <DockerfileRunEnvironmentFiles>$(MSBuildProjectDirectory)\devHttps.env</DockerfileRunEnvironmentFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <Target Name="CreateDevCert" Inputs="$(MSBuildProjectDirectory)\..\devHttps\Create-Certs.ps1" Outputs="$(MSBuildProjectDirectory)\devHttps.env" Condition=" '$(BuildingInsideVisualStudio)' == 'true' ">
+    <Exec Condition="!Exists('devHttps.env')" Command="powershell -ExecutionPolicy ByPass ..\devHttps\Create-Cert.ps1 " WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="devHttps.env" />
+  </ItemGroup>
+
+</Project>

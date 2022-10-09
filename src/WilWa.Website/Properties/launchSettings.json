@@ -1,0 +1,18 @@
+{
+  "Docker Compose": {
+    "useSSL": true
+  },
+  "$schema": "https://json.schemastore.org/launchSettings.json",
+  "profiles": {
+    "WilWa.Website": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true,
+      "useSSL":  true
+    }
+  }
+}
