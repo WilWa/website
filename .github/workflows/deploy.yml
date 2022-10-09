@@ -25,6 +25,6 @@ jobs:
         ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
         IMAGE_TAG: wilwanet
       run: |
-        docker build . --file ./src/WilWa.Website/Dockerfile --tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build . --file ./src/WilWa.Website/Dockerfile --tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --target final
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       
