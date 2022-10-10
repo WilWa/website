@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devHttps", "devHttps", "{AE
 		src\devHttps\Create-Cert.ps1 = src\devHttps\Create-Cert.ps1
 	EndProjectSection
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "website-vue", "src\website-vue\website-vue.esproj", "{6E221E9D-7397-45CE-A091-13B159C0D494}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,14 @@ Global
 		{D38F3974-E63F-4C20-BF6B-6710E3538E4E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D38F3974-E63F-4C20-BF6B-6710E3538E4E}.Release|x86.ActiveCfg = Release|Any CPU
 		{D38F3974-E63F-4C20-BF6B-6710E3538E4E}.Release|x86.Build.0 = Release|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Debug|x86.Build.0 = Debug|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Release|x86.Build.0 = Release|Any CPU
+		{6E221E9D-7397-45CE-A091-13B159C0D494}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /src/src/website-vue
+cd /src/website-vue
 yarn install
 yarn dev
 tail -f /dev/null

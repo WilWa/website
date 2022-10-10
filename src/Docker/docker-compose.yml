@@ -11,5 +11,7 @@ services:
       - ASPNETCORE_URLS=https://+:443
     ports:
       - 5001:443
+    stdin_open: true
+    tty: true
     volumes:
       - ${APPDATA}/ASP.NET/Https:/https:ro
