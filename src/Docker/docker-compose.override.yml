@@ -2,6 +2,8 @@ version: '3.4'
 
 services:
   wilwa.website:
+    build:
+      target: final
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     env_file: ../WilWa.Website/devHttps.env
