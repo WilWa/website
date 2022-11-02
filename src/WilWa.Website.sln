@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilWa.Website", "src\WilWa.Website\WilWa.Website.csproj", "{15F31E83-FC55-466D-9004-990DF6494F8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilWa.Website", "WilWa.Website\WilWa.Website.csproj", "{15F31E83-FC55-466D-9004-990DF6494F8A}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "src\Docker\docker-compose.dcproj", "{D38F3974-E63F-4C20-BF6B-6710E3538E4E}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "Docker\docker-compose.dcproj", "{D38F3974-E63F-4C20-BF6B-6710E3538E4E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devHttps", "devHttps", "{AEB07293-52E2-4CFC-B34A-F5ED6B34B00C}"
 	ProjectSection(SolutionItems) = preProject
-		src\devHttps\Create-Cert.ps1 = src\devHttps\Create-Cert.ps1
+		devHttps\Create-Cert.ps1 = devHttps\Create-Cert.ps1
 	EndProjectSection
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "website-vue", "src\website-vue\website-vue.esproj", "{6E221E9D-7397-45CE-A091-13B159C0D494}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "website-vue", "website-vue\website-vue.esproj", "{6E221E9D-7397-45CE-A091-13B159C0D494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

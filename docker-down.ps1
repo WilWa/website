@@ -1,0 +1,1 @@
+docker compose --project-directory .\src\Docker down

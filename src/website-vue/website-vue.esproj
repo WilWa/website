@@ -1,2 +1,10 @@
-﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.55-alpha">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+    <Import Project="Sdk.props"
+            Sdk="Microsoft.VisualStudio.JavaScript.SDK"
+            Version="0.5.62-alpha" />
+    <Import Project="Sdk.targets"
+            Sdk="Microsoft.VisualStudio.JavaScript.SDK"
+            Version="0.5.62-alpha" />
+    <Target Name="DebugEnsureNodeEnv" />
 </Project>

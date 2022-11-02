@@ -23,6 +23,15 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WilWa.Website.dll"]
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS vsdev
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS devbase
 WORKDIR /app
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs && corepack enable
+
+FROM devbase AS vsdev
+# See https://aka.ms/containerfastmode to understand how Visual Studio
+# uses this Dockerfile to build your images for faster debugging.
+
+FROM devbase AS codedev
+RUN apt update && apt install unzip && curl -sSL https://aka.ms/getvsdbgsh | /bin/sh /dev/stdin -v latest -l /vsdbg
+COPY [ "./WilWa.Website/DevScripts/codedev-entrypoint.sh", "/scripts/" ]
+ENTRYPOINT [ "/scripts/codedev-entrypoint.sh" ]

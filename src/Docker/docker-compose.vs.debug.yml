@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  wilwa.website:
+  wilwa-website:
     build:
       target: vsdev
-    entrypoint: ["./DevScripts/vsdev_entrypoint.sh"]
+    entrypoint: ["./DevScripts/vsdev-entrypoint.sh"]

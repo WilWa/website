@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  wilwa.website:
+  wilwa-website:
     image: wilwa-website
     build:
       context: ..
@@ -14,4 +14,4 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ${APPDATA}/ASP.NET/Https:/https:ro
+      - ${APPDATA}/.aspnet/Https:/https:ro

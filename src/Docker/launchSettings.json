@@ -1,14 +1,13 @@
 {
-  "$schema": "https://json.schemastore.org/launchSettings.json",
   "profiles": {
     "Docker Compose": {
       "commandName": "DockerCompose",
-      "composeLaunchAction": "LaunchBrowser",
-      "composeLaunchServiceName": "wilwa.website",
-      "composeLaunchUrl": "{Scheme}://localhost:5001/swagger",
       "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "wilwa-website",
+      "composeLaunchUrl": "{Scheme}://localhost:5001",
       "serviceActions": {
-        "wilwa.website": "StartDebugging"
+        "wilwa-website": "StartDebugging"
       }
     }
   }
