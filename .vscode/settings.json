@@ -1,0 +1,13 @@
+{
+    "cSpell.ignoreWords": [
+        "argumentless",
+        "rushstack",
+        "stylelint"
+    ],
+    "cSpell.words": [
+        "wilwa"
+    ],
+    "stylelint.validate": [
+        "vue"
+    ]
+}

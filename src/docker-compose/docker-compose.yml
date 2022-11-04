@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   wilwa-website:
@@ -6,6 +6,7 @@ services:
     build:
       context: ..
       dockerfile: WilWa.Website/Dockerfile
+    container_name: wilwa-website
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443
@@ -14,4 +15,4 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ${APPDATA}/.aspnet/Https:/https:ro
+      - ${APPDATA}/.aspnet/https:/https:ro

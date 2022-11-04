@@ -1,0 +1,8 @@
+<Project>
+    <PropertyGroup Condition=" '$(OS)' == 'Unix' ">
+        <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)/obj/linux/</BaseIntermediateOutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+        <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)/obj/windows/</BaseIntermediateOutputPath>
+    </PropertyGroup>
+</Project>

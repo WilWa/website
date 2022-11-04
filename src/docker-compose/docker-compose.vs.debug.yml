@@ -4,4 +4,4 @@ services:
   wilwa-website:
     build:
       target: vsdev
-    entrypoint: ["./DevScripts/vsdev-entrypoint.sh"]
+    entrypoint: ["DevScripts/vsdev-entrypoint.sh"]
